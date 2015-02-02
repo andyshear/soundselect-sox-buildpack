@@ -1,8 +1,7 @@
 Heroku buildpack: sox
 =======================
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for using [sox](http://sox.sourceforge.net/) in your project.  
-It doesn't do anything else, so to actually compile your app you should use [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) to combine it with a real buildpack.
+This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for using [sox](http://sox.sourceforge.net/) in your project.
 
 Lineage
 -------
@@ -15,17 +14,10 @@ To use this buildpack, you should prepare a .buildpacks file that contains this 
 
     $ ls
     .buildpacks
-    ...
     
     $ cat .buildpacks
-    https://github.com/lepinsk/heroku-buildpack-sox
-
-    $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi
-
-    $ git push heroku master
-    ...
+    https://github.com/RBNA/soundselect-sox-buildpack
 
 You can verify that sox is installed by calling:
 
     $ heroku run "sox"
-
