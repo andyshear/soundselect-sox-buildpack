@@ -45,7 +45,7 @@ indent() {
 echo "-----> Install sox"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
-DOWNLOAD_URL="https://s3.amazonaws.com/sox-lame-buildpack/sox.tar.gz"
+DOWNLOAD_URL="http://sox-buildpack.s3.amazonaws.com/sox.tar.gz"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
