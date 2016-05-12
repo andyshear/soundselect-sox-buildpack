@@ -12,6 +12,7 @@ DOWNLOAD_URL="https://s3.amazonaws.com/sox-lame-buildpack/libvorbis-1.3.5.tar.gz
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
 cd $BUILD_DIR
+pwd
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
@@ -30,6 +31,7 @@ DOWNLOAD_URL="https://s3.amazonaws.com/sox-lame-buildpack/lame-3.99.5.tar.gz"
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
 cd $BUILD_DIR
+pwd
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
@@ -48,6 +50,7 @@ DOWNLOAD_URL="https://s3.amazonaws.com/sox-lame-buildpack/sox-14.4.2.tar.gz"
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
 cd $BUILD_DIR
+pwd
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
