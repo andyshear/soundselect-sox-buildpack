@@ -61,6 +61,8 @@ mkdir -p $(dirname $PROFILE_PATH)
 cd $PROFILE_PATH
 echo "PROFILE_PATH = " $PROFILE_PATH | indent
 ls -al
+cd sox-14.4.2
+ls -al
 ./configure
 make
 sudo make install
