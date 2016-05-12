@@ -45,7 +45,7 @@ indent() {
 echo "-----> Install sox"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
-DOWNLOAD_URL="https://s3.amazonaws.com/sox-lame-buildpack/sox-14.4.2.tar.gz"
+DOWNLOAD_URL="https://s3.amazonaws.com/sox-lame-buildpack/sox.tar.gz"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
@@ -56,15 +56,6 @@ curl -L --silent $DOWNLOAD_URL | tar xz
 
 echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/sox.sh"
-echo "PROFILE_PATH = " $PROFILE_PATH | indent
 mkdir -p $(dirname $PROFILE_PATH)
-cd $PROFILE_PATH
-echo "PROFILE_PATH = " $PROFILE_PATH | indent
-ls -al
-cd sox-14.4.2
-ls -al
-./configure
-make
-sudo make install
 echo 'export PATH="$PATH:vendor/sox/bin"' >> $PROFILE_PATH
 echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/sox/lib"' >> $PROFILE_PATH
